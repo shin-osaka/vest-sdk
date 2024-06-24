@@ -1,0 +1,25 @@
+//配置插件的依赖仓库
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+//配置项目依赖和子模块依赖仓库
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url("https://s01.oss.sonatype.org/content/repositories/snapshots/") }
+    }
+}
+rootProject.name = "Vest-SDK"
+include ':app-sdk'
+include ':lib-util'
+include ':app-b'
+include ':app-shf'
+include ':app-core'
+include ':app'
+include ':app-firebase'
